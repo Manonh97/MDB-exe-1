@@ -1,0 +1,27 @@
+\\Ecrire l'algorithme décrivant un programme permettant à une hotesse de calculer le prix d'une place en fonction de l'âge du passager.
+\\Les enfants de moins de deux ans ne paient pas, 
+\\ceux qui ont moins de 10 ans paient moitié prix et 
+\\les personnes de moins de 27 ans et celles de plus de 70 ans ont une réduction de 10%. 
+\\L'utilisateur doit saisir le prix de base du billet et l'âge de passager. 
+\\Le programme affiche le résultat.
+
+\\ Module principal
+
+DÉBUT
+
+    ECRIRE "age ?"
+        LIRE age
+        SI age <= 2 ALORS
+            ECRIRE "gratuit"
+        SINON
+             ECRIRE "prix?"
+                 LIRE prix
+             SI age <= 10 ALORS
+                 ECRIRE prix / 2 
+             SINON
+                 SI age < 27 OU age > 70 ALORS 
+                    ECRIRE prix - ( prix / 100 * 10 )
+        FINSI            
+             FINSI
+                  FINSI
+FIN
